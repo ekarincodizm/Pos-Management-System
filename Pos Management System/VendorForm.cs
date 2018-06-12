@@ -20,16 +20,7 @@ namespace Pos_Management_System
 
         private void VendorForm_Load(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear();
-            dataGridView1.Refresh();
-            var data = Singleton.SingletonVender.Instance().Vendors;
-            foreach (var item in data)
-            {
-                dataGridView1.Rows.Add(item.Id, item.Code, item.Name, item.Address, item.Tel, item.Fax, item.POCostType.Name, Library.GetFullNameUserById(item.CreateBy),
-                    Library.ConvertBoolToStr(item.Enable), item.Description);
-            }
-            /// row color
-            RowColor();
+            dataGrid();
         }
         private void RowColor()
         {
@@ -231,8 +222,9 @@ namespace Pos_Management_System
                 var v = db.Vendor.Include("POCostType").OrderByDescending(w => w.UpdateDate).Where(w => w.UpdateBy == user).FirstOrDefault();
                 Singleton.SingletonVender.Instance().Vendors.Add(v);
 
-                this.Dispose();
-                _Id = 0;
+                dataGrid();
+                //this.Dispose();
+                //_Id = 0;
             }
         }
 
@@ -327,9 +319,25 @@ namespace Pos_Management_System
                 string user = Singleton.SingletonAuthen.Instance().Id;
                 var v = db.Vendor.Include("POCostType").OrderByDescending(w => w.UpdateDate).Where(w => w.UpdateBy == user).FirstOrDefault();
                 Singleton.SingletonVender.Instance().Vendors.Add(v);
-                _Id = 0;
+
+                dataGrid();
+                //_Id = 0;
                 Reload(textBoxSearchKey.Text.Trim());
             }
+        }
+
+        public void dataGrid()
+        {
+            dataGridView1.Rows.Clear();
+            dataGridView1.Refresh();
+            var data = Singleton.SingletonVender.Instance().Vendors;
+            foreach (var item in data)
+            {
+                dataGridView1.Rows.Add(item.Id, item.Code, item.Name, item.Address, item.Tel, item.Fax, item.POCostType.Name, Library.GetFullNameUserById(item.CreateBy),
+                    Library.ConvertBoolToStr(item.Enable), item.Description);
+            }
+            /// row color
+            RowColor();
         }
 
     }

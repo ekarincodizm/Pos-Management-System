@@ -20,14 +20,7 @@ namespace Pos_Management_System
 
         private void SupplierForm_Load(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear();
-            dataGridView1.Refresh();
-            var data = Singleton.SingletonPriority1.Instance().Supplier;
-            foreach (var item in data)
-            {
-                dataGridView1.Rows.Add(item.Id, item.Code, item.Name, item.Address, item.Tel, Library.GetFullNameUserById(item.CreateBy),
-                    Library.ConvertBoolToStr(item.Enable), item.Description);
-            }
+            dataGrid();
         }
         private void dataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
@@ -125,10 +118,25 @@ namespace Pos_Management_System
                 }
                 db.SaveChanges();
                 Singleton.SingletonPriority1.SetInstance();
-                Singleton.SingletonPriority1.Instance();
-                this.Dispose();
-                _Id = 0;
+                //Singleton.SingletonPriority1.Instance();
+
+                dataGrid();
+                //this.Dispose();
+                //_Id = 0;
             }
         }
+
+        public void dataGrid()
+        {
+            dataGridView1.Rows.Clear();
+            dataGridView1.Refresh();
+            var data = Singleton.SingletonPriority1.Instance().Supplier;
+            foreach (var item in data)
+            {
+                dataGridView1.Rows.Add(item.Id, item.Code, item.Name, item.Address, item.Tel, Library.GetFullNameUserById(item.CreateBy),
+                    Library.ConvertBoolToStr(item.Enable), item.Description);
+            }
+        }
+
     }
 }
