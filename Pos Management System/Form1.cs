@@ -393,7 +393,7 @@ namespace Pos_Management_System
 
             ProductUnitForm obj = new ProductUnitForm();
             obj.MdiParent = this;
-            maxminForm(obj,"max");
+            maxminForm(obj,"min");
             obj.Show();
         }
 
