@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7de885e816ac4fd595782ac9f460089e" Name="Diagram1" ZoomLevel="89">
+        <EntityTypeShape EntityType="SSLsModel.Branch" Width="1.5" PointX="4.5" PointY="47" />
+        <EntityTypeShape EntityType="SSLsModel.Menu" Width="1.5" PointX="17.5" PointY="134.25" />
+        <EntityTypeShape EntityType="SSLsModel.MenuAccess" Width="1.5" PointX="19.75" PointY="120.125" />
+        <EntityTypeShape EntityType="SSLsModel.Role" Width="1.5" PointX="7.5" PointY="120.125" />
+        <EntityTypeShape EntityType="SSLsModel.Users" Width="1.5" PointX="9.75" PointY="119.875" />
+        <EntityTypeShape EntityType="SSLsModel.CNCancel" Width="1.5" PointX="21.5" PointY="97.375" />
+        <EntityTypeShape EntityType="SSLsModel.CNDetails" Width="1.5" PointX="21.5" PointY="82.75" />
+        <EntityTypeShape EntityType="SSLsModel.CNHeader" Width="1.5" PointX="19.25" PointY="96.25" />
+        <EntityTypeShape EntityType="SSLsModel.CNType" Width="1.5" PointX="17" PointY="97.25" />
+        <EntityTypeShape EntityType="SSLsModel.DebtorPaymentDetails" Width="1.5" PointX="19.25" PointY="115.125" />
+        <EntityTypeShape EntityType="SSLsModel.EmpHasPosition" Width="1.5" PointX="18" PointY="54.25" />
+        <EntityTypeShape EntityType="SSLsModel.Employee" Width="1.5" PointX="12.75" PointY="54.125" />
+        <EntityTypeShape EntityType="SSLsModel.MemberDividendEarning" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SSLsModel.Position" Width="1.5" PointX="15.75" PointY="25.375" />
+        <EntityTypeShape EntityType="SSLsModel.RePrintReceiptLog" Width="1.5" PointX="14.25" PointY="116.875" />
+        <EntityTypeShape EntityType="SSLsModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SSLsModel.Debtor" Width="1.5" PointX="9.75" PointY="104.875" />
+        <EntityTypeShape EntityType="SSLsModel.DebtorPayment" Width="1.5" PointX="17" PointY="130.125" />
+        <EntityTypeShape EntityType="SSLsModel.AgeOfShare" Width="1.5" PointX="11.75" PointY="25.75" />
+        <EntityTypeShape EntityType="SSLsModel.Meeting" Width="1.5" PointX="9.75" PointY="130.25" />
+        <EntityTypeShape EntityType="SSLsModel.MeetingSchedule" Width="1.5" PointX="12" PointY="107.875" />
+        <EntityTypeShape EntityType="SSLsModel.Member" Width="1.5" PointX="9.75" PointY="110" />
+        <EntityTypeShape EntityType="SSLsModel.MemberChangeMoney25601" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="SSLsModel.MemberChangeMoney2560Del" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="SSLsModel.MemberShare" Width="1.5" PointX="18" PointY="63.5" />
+        <EntityTypeShape EntityType="SSLsModel.Sex" Width="1.5" PointX="7.5" PointY="111.25" />
+        <EntityTypeShape EntityType="SSLsModel.Share" Width="1.5" PointX="15.75" PointY="30" />
+        <EntityTypeShape EntityType="SSLsModel.ShareMonth" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SSLsModel.SaleOrderWarehouse" Width="1.5" PointX="17" PointY="106.375" />
+        <EntityTypeShape EntityType="SSLsModel.SaleOrderWarehouseDtl" Width="1.5" PointX="19.25" PointY="83.5" />
+        <EntityTypeShape EntityType="SSLsModel.SaleOrderWarehouseStatus" Width="1.5" PointX="14.75" PointY="113.125" />
+        <EntityTypeShape EntityType="SSLsModel.AdjustStoreFront" Width="1.5" PointX="15" PointY="101.25" />
+        <EntityTypeShape EntityType="SSLsModel.AdjustStoreFrontDetail" Width="1.5" PointX="17.25" PointY="78.875" />
+        <EntityTypeShape EntityType="SSLsModel.BudgetYear" Width="1.5" PointX="9.5" PointY="35.25" />
+        <EntityTypeShape EntityType="SSLsModel.Campaign" Width="1.5" PointX="0.75" PointY="68.25" />
+        <EntityTypeShape EntityType="SSLsModel.CheckStockDetails" Width="1.5" PointX="13.5" PointY="83.5" />
+        <EntityTypeShape EntityType="SSLsModel.CheckStockPos" Width="1.5" PointX="8.25" PointY="87.5" />
+        <EntityTypeShape EntityType="SSLsModel.CostDtlChangeLog" Width="1.5" PointX="5.25" PointY="193.75" />
+        <EntityTypeShape EntityType="SSLsModel.CostType" Width="1.5" PointX="3.75" PointY="54.375" />
+        <EntityTypeShape EntityType="SSLsModel.Customers" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="SSLsModel.DeliveryType" Width="1.5" PointX="14.75" PointY="109.375" />
+        <EntityTypeShape EntityType="SSLsModel.GetGoodsStoreFront" Width="1.5" PointX="6" PointY="63.25" />
+        <EntityTypeShape EntityType="SSLsModel.GetGoodsStoreFrontDetails" Width="1.5" PointX="8.25" PointY="70.875" />
+        <EntityTypeShape EntityType="SSLsModel.ISS2Front" Width="1.5" PointX="15" PointY="55.125" />
+        <EntityTypeShape EntityType="SSLsModel.ISS2FrontDetails" Width="1.5" PointX="17.25" PointY="73.375" />
+        <EntityTypeShape EntityType="SSLsModel.ISS2FrontStatus" Width="1.5" PointX="12.75" PointY="58.375" />
+        <EntityTypeShape EntityType="SSLsModel.PaymentType" Width="1.5" PointX="14.75" PointY="105.5" />
+        <EntityTypeShape EntityType="SSLsModel.POCostType" Width="1.5" PointX="1.5" PointY="104.125" />
+        <EntityTypeShape EntityType="SSLsModel.PODetail" Width="1.5" PointX="11.25" PointY="93.25" />
+        <EntityTypeShape EntityType="SSLsModel.POGenerate" Width="1.5" PointX="14.75" PointY="42.125" />
+        <EntityTypeShape EntityType="SSLsModel.POHeader" Width="1.5" PointX="11.75" PointY="30.625" />
+        <EntityTypeShape EntityType="SSLsModel.PORcv" Width="1.5" PointX="14" PointY="34.625" />
+        <EntityTypeShape EntityType="SSLsModel.PORcvCash" Width="1.5" PointX="9" PointY="55.125" />
+        <EntityTypeShape EntityType="SSLsModel.PORcvCashDetails" Width="1.5" PointX="11.25" PointY="87.375" />
+        <EntityTypeShape EntityType="SSLsModel.PORcvDetails" Width="1.5" PointX="16.25" PointY="83.875" />
+        <EntityTypeShape EntityType="SSLsModel.PosDetails" Width="1.5" PointX="14.25" PointY="77.125" />
+        <EntityTypeShape EntityType="SSLsModel.PosGenerateCode" Width="1.5" PointX="23" PointY="78.375" />
+        <EntityTypeShape EntityType="SSLsModel.PosHeader" Width="1.5" PointX="12" PointY="112.25" />
+        <EntityTypeShape EntityType="SSLsModel.PosMachine" Width="1.5" PointX="9.75" PointY="124.25" />
+        <EntityTypeShape EntityType="SSLsModel.PosPromotion" Width="1.5" PointX="22.25" PointY="101.375" />
+        <EntityTypeShape EntityType="SSLsModel.PosStock" Width="1.5" PointX="20.25" PointY="72.75" />
+        <EntityTypeShape EntityType="SSLsModel.PosStockDetails" Width="1.5" PointX="11.25" PointY="75.375" />
+        <EntityTypeShape EntityType="SSLsModel.POStatus" Width="1.5" PointX="9.5" PointY="31.5" />
+        <EntityTypeShape EntityType="SSLsModel.PosType" Width="1.5" PointX="9.75" PointY="116.125" />
+        <EntityTypeShape EntityType="SSLsModel.PriceSchedule" Width="1.5" PointX="3" PointY="67" />
+        <EntityTypeShape EntityType="SSLsModel.PriceScheduleCheck" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SSLsModel.PrintSlipLog" Width="1.5" PointX="14.25" PointY="132.125" />
+        <EntityTypeShape EntityType="SSLsModel.ProcessedGoods" Width="1.5" PointX="5.25" PointY="197.625" />
+        <EntityTypeShape EntityType="SSLsModel.ProductCategory" Width="1.5" PointX="3.75" PointY="124" />
+        <EntityTypeShape EntityType="SSLsModel.ProductColor" Width="1.5" PointX="3.75" PointY="62.625" />
+        <EntityTypeShape EntityType="SSLsModel.ProductPosCollectPoints" Width="1.5" PointX="3.75" PointY="99.75" />
+        <EntityTypeShape EntityType="SSLsModel.ProductSize" Width="1.5" PointX="3.75" PointY="108.625" />
+        <EntityTypeShape EntityType="SSLsModel.ProductVatType" Width="1.5" PointX="3.75" PointY="112.375" />
+        <EntityTypeShape EntityType="SSLsModel.Projects" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="SSLsModel.RcvInvoice" Width="1.5" PointX="6.75" PointY="7.75" />
+        <EntityTypeShape EntityType="SSLsModel.ReceiptAddress" Width="1.5" PointX="12" PointY="122.75" />
+        <EntityTypeShape EntityType="SSLsModel.SellingPrice" Width="1.5" PointX="5.25" PointY="67.75" />
+        <EntityTypeShape EntityType="SSLsModel.SellingPriceDetails" Width="1.5" PointX="13.5" PointY="66.375" />
+        <EntityTypeShape EntityType="SSLsModel.SellPriceChangeLog" Width="1.5" PointX="5.25" PointY="163.375" />
+        <EntityTypeShape EntityType="SSLsModel.Shelf" Width="1.5" PointX="15" PointY="62.25" />
+        <EntityTypeShape EntityType="SSLsModel.StoreFrontStock" Width="1.5" PointX="8.25" PointY="91.375" />
+        <EntityTypeShape EntityType="SSLsModel.StoreFrontStockDetails" Width="1.5" PointX="13.5" PointY="88.75" />
+        <EntityTypeShape EntityType="SSLsModel.StoreFrontStockDetails1310" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SSLsModel.StoreFrontStockDetails161017" Width="1.5" PointX="8.75" PointY="6.75" />
+        <EntityTypeShape EntityType="SSLsModel.StoreFrontStockDetailsForUpdate" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SSLsModel.StoreFrontTransferOut" Width="1.5" PointX="6" PointY="57.25" />
+        <EntityTypeShape EntityType="SSLsModel.StoreFrontTransferOutDtl" Width="1.5" PointX="8.25" PointY="75.625" />
+        <EntityTypeShape EntityType="SSLsModel.StoreFrontTransferWaste" Width="1.5" PointX="9" PointY="45.875" />
+        <EntityTypeShape EntityType="SSLsModel.StoreFrontTransferWasteDtl" Width="1.5" PointX="11.25" PointY="71" />
+        <EntityTypeShape EntityType="SSLsModel.StoreFrontValueDoc" Width="1.5" PointX="6" PointY="96.375" />
+        <EntityTypeShape EntityType="SSLsModel.StoreFrontValueSet" Width="1.5" PointX="8.25" PointY="81.25" />
+        <EntityTypeShape EntityType="SSLsModel.TransactionType" Width="1.5" PointX="9" PointY="66.125" />
+        <EntityTypeShape EntityType="SSLsModel.Transport" Width="1.5" PointX="11.75" PointY="41.5" />
+        <EntityTypeShape EntityType="SSLsModel.VatType" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="SSLsModel.Vendor" Width="1.5" PointX="3.75" PointY="103.25" />
+        <EntityTypeShape EntityType="SSLsModel.WasteReason" Width="1.5" PointX="6.75" PointY="42.875" />
+        <EntityTypeShape EntityType="SSLsModel.CNWarehouse" Width="1.5" PointX="3" PointY="40.125" />
+        <EntityTypeShape EntityType="SSLsModel.CNWarehouseDetails" Width="1.5" PointX="5.25" PointY="72.75" />
+        <EntityTypeShape EntityType="SSLsModel.CostProductChangeLog" Width="1.5" PointX="8.25" PointY="99.75" />
+        <EntityTypeShape EntityType="SSLsModel.CurrentStocks" Width="1.5" PointX="16.25" PointY="90.375" />
+        <EntityTypeShape EntityType="SSLsModel.ItemRemark" Width="1.5" PointX="17" PointY="120.25" />
+        <EntityTypeShape EntityType="SSLsModel.ItemStatus" Width="1.5" PointX="14" PointY="95.5" />
+        <EntityTypeShape EntityType="SSLsModel.Locations" Width="1.5" PointX="14" PointY="48.875" />
+        <EntityTypeShape EntityType="SSLsModel.LocationType" Width="1.5" PointX="11.75" PointY="49.375" />
+        <EntityTypeShape EntityType="SSLsModel.PickingDetails" Width="1.5" PointX="19.25" PointY="124.75" />
+        <EntityTypeShape EntityType="SSLsModel.PickingLocation" Width="1.5" PointX="21.5" PointY="91" />
+        <EntityTypeShape EntityType="SSLsModel.Pickings" Width="1.5" PointX="17" PointY="124.875" />
+        <EntityTypeShape EntityType="SSLsModel.PickingType" Width="1.5" PointX="14.75" PointY="125.25" />
+        <EntityTypeShape EntityType="SSLsModel.ProductBrands" Width="1.5" PointX="3.75" PointY="116" />
+        <EntityTypeShape EntityType="SSLsModel.ProductDetails" Width="1.5" PointX="3" PointY="78.5" />
+        <EntityTypeShape EntityType="SSLsModel.ProductGroups" Width="1.5" PointX="3.75" PointY="96" />
+        <EntityTypeShape EntityType="SSLsModel.Products" Width="1.5" PointX="6" PointY="78" />
+        <EntityTypeShape EntityType="SSLsModel.ProductUnit" Width="1.5" PointX="0.75" PointY="82" />
+        <EntityTypeShape EntityType="SSLsModel.RcvDetails" Width="1.5" PointX="17.25" PointY="44.625" />
+        <EntityTypeShape EntityType="SSLsModel.RcvHeader" Width="1.5" PointX="9" PointY="40.875" />
+        <EntityTypeShape EntityType="SSLsModel.RcvLocation" Width="1.5" PointX="19.5" PointY="46.875" />
+        <EntityTypeShape EntityType="SSLsModel.RcvType" Width="1.5" PointX="6.75" PointY="38.375" />
+        <EntityTypeShape EntityType="SSLsModel.Supplier" Width="1.5" PointX="3.75" PointY="119.75" />
+        <EntityTypeShape EntityType="SSLsModel.TransactionWms" Width="1.5" PointX="17" PointY="116.375" />
+        <EntityTypeShape EntityType="SSLsModel.Warehouse" Width="1.5" PointX="6.75" PointY="47.625" />
+        <EntityTypeShape EntityType="SSLsModel.WarehouseToWaste" Width="1.5" PointX="9" PointY="62.125" />
+        <EntityTypeShape EntityType="SSLsModel.WarehouseToWasteDetails" Width="1.5" PointX="11.25" PointY="81.75" />
+        <EntityTypeShape EntityType="SSLsModel.WasteWarehouse" Width="1.5" PointX="17.25" PointY="68.875" />
+        <EntityTypeShape EntityType="SSLsModel.WasteWarehouseDetails" Width="1.5" PointX="14.25" PointY="71.125" />
+        <EntityTypeShape EntityType="SSLsModel.WmsStock" Width="1.5" PointX="20.25" PointY="77.75" />
+        <EntityTypeShape EntityType="SSLsModel.WmsStockDetail" Width="1.5" PointX="19.25" PointY="89.25" />
+        <EntityTypeShape EntityType="SSLsModel.WmsTransferOut" Width="1.5" PointX="3" PointY="90.5" />
+        <EntityTypeShape EntityType="SSLsModel.WmsTransferOutDetails" Width="1.5" PointX="5.25" PointY="90.75" />
+        <EntityTypeShape EntityType="SSLsModel.Zone" Width="1.5" PointX="3.75" PointY="58.25" />
+        <EntityTypeShape EntityType="SSLsModel.PosUsedPromotion" Width="1.5" PointX="19.25" PointY="102.375" />
+        <EntityTypeShape EntityType="SSLsModel.CheckPromotionDiscountView" Width="1.5" PointX="2.75" PointY="10.75" />
+        <EntityTypeShape EntityType="SSLsModel.SellingPriceActive" Width="1.5" PointX="10.75" PointY="6.75" />
+        <EntityTypeShape EntityType="SSLsModel.V_AllWasteMinus" Width="1.5" PointX="10.75" PointY="11.75" />
+        <EntityTypeShape EntityType="SSLsModel.V_AllWastePlus" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SSLsModel.V_CurrentWasteStock" Width="1.5" PointX="12.75" PointY="3.75" />
+        <EntityTypeShape EntityType="SSLsModel.V_DifStockCount01" Width="1.5" PointX="4.75" PointY="12.75" />
+        <EntityTypeShape EntityType="SSLsModel.V_DifStockCount02" Width="1.5" PointX="6.75" PointY="12.75" />
+        <EntityTypeShape EntityType="SSLsModel.V_DifStockCount03" Width="1.5" PointX="12.75" PointY="7.75" />
+        <EntityTypeShape EntityType="SSLsModel.V_LastWasteWarehouse" Width="1.5" PointX="12.75" PointY="11.75" />
+        <EntityTypeShape EntityType="SSLsModel.V_PO" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SSLsModel.V_Profit" Width="1.5" PointX="0.75" PointY="14.75" />
+        <EntityTypeShape EntityType="SSLsModel.V_RcvDetail" Width="1.5" PointX="14.75" PointY="5.75" />
+        <EntityTypeShape EntityType="SSLsModel.V_Stkmas" Width="1.5" PointX="8.75" PointY="14.75" />
+        <EntityTypeShape EntityType="SSLsModel.V_StockBal01" Width="1.5" PointX="10.75" PointY="14.75" />
+        <EntityTypeShape EntityType="SSLsModel.V_StockBal02" Width="1.5" PointX="14.75" PointY="12.75" />
+        <EntityTypeShape EntityType="SSLsModel.V_StockCard" Width="1.5" PointX="2.75" PointY="15.75" />
+        <EntityTypeShape EntityType="SSLsModel.V_StockCount01" Width="1.5" PointX="12.75" PointY="15.75" />
+        <EntityTypeShape EntityType="SSLsModel.V_StockCount02" Width="1.5" PointX="14.75" PointY="15.75" />
+        <EntityTypeShape EntityType="SSLsModel.V_StockDetail" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SSLsModel.V_WmsCard" Width="1.5" PointX="4.75" PointY="16.75" />
+        <EntityTypeShape EntityType="SSLsModel.View_CheckFront_01_11_17" Width="1.5" PointX="16.75" PointY="5.75" />
+        <EntityTypeShape EntityType="SSLsModel.View_CheckFront_01_11_17_BCK" Width="1.5" PointX="16.75" PointY="10.75" />
+        <EntityTypeShape EntityType="SSLsModel.View_GetFrontStockByProductDate" Width="1.5" PointX="16.75" PointY="15.75" />
+        <EntityTypeShape EntityType="SSLsModel.View_สมาช_กรายช__อ" Width="1.5" PointX="18.75" PointY="0.75" />
+        <AssociationConnector Association="SSLsModel.FK_POGenerate_Branch" />
+        <AssociationConnector Association="SSLsModel.FK_POHeader_Branch" />
+        <AssociationConnector Association="SSLsModel.FK_PosMachine_Branch" />
+        <AssociationConnector Association="SSLsModel.FK_SaleOrderWarehouse_Branch" />
+        <AssociationConnector Association="SSLsModel.FK_StoreFrontTransferOut_Branch" />
+        <AssociationConnector Association="SSLsModel.FK_Users_Branch" />
+        <AssociationConnector Association="SSLsModel.FK_Warehouse_Branch" />
+        <AssociationConnector Association="SSLsModel.FK_WmsTransferOut_Branch" />
+        <AssociationConnector Association="SSLsModel.FK_MenuAccess_Menu" />
+        <AssociationConnector Association="SSLsModel.FK_MenuAccess_Role" />
+        <AssociationConnector Association="SSLsModel.FK_Users_Role" />
+        <AssociationConnector Association="SSLsModel.FK_PosHeader_Users" />
+        <AssociationConnector Association="SSLsModel.FK_CNTrace_CNHeader" />
+        <AssociationConnector Association="SSLsModel.FK_CNDetails_CNHeader" />
+        <AssociationConnector Association="SSLsModel.FK_CNDetails_PosDetails" />
+        <AssociationConnector Association="SSLsModel.FK_CNHeader_CNType" />
+        <AssociationConnector Association="SSLsModel.FK_CNHeader_PosHeader" />
+        <AssociationConnector Association="SSLsModel.FK_DebtorPaymentDetails_DebtorPayment" />
+        <AssociationConnector Association="SSLsModel.FK_DebtorPaymentDetails_PosHeader" />
+        <AssociationConnector Association="SSLsModel.FK_EmpHasPosition_Employee" />
+        <AssociationConnector Association="SSLsModel.FK_EmpHasPosition_Position" />
+        <AssociationConnector Association="SSLsModel.FK_ISS2Front_Employee" />
+        <AssociationConnector Association="SSLsModel.FK_StoreFrontTransferOut_Employee" />
+        <AssociationConnector Association="SSLsModel.FK_WmsTransferOut_Employee" />
+        <AssociationConnector Association="SSLsModel.FK_RePrintReceiptLog_PosHeader" />
+        <AssociationConnector Association="SSLsModel.FK_RePrintReceiptLog_ReceiptAddress" />
+        <AssociationConnector Association="SSLsModel.FK_PosHeader_Debtor" />
+        <AssociationConnector Association="SSLsModel.FK_SaleOrderWarehouse_Debtor" />
+        <AssociationConnector Association="SSLsModel.FK_AgeOfShare_BudgetYear" />
+        <AssociationConnector Association="SSLsModel.FK_MemberShare_AgeOfShare" />
+        <AssociationConnector Association="SSLsModel.FK_MeetingSchedule_Meeting" />
+        <AssociationConnector Association="SSLsModel.FK_MeetingSchedule_Member" />
+        <AssociationConnector Association="SSLsModel.FK_Member_Sex" />
+        <AssociationConnector Association="SSLsModel.FK_MemberShare_Member" />
+        <AssociationConnector Association="SSLsModel.FK_PosHeader_Member" />
+        <AssociationConnector Association="SSLsModel.FK_SaleOrderWarehouse_Member" />
+        <AssociationConnector Association="SSLsModel.FK_MemberShare_BudgetYear" />
+        <AssociationConnector Association="SSLsModel.FK_MemberShare_Share" />
+        <AssociationConnector Association="SSLsModel.FK_SaleOrderWarehouse_DeliveryType" />
+        <AssociationConnector Association="SSLsModel.FK_SaleOrderWarehouse_PaymentType" />
+        <AssociationConnector Association="SSLsModel.FK_SaleOrderWarehouse_SaleOrderWarehouseStatus" />
+        <AssociationConnector Association="SSLsModel.FK_SaleOrderWarehouseDtl_SaleOrderWarehouse" />
+        <AssociationConnector Association="SSLsModel.FK_SaleOrderWarehouseDtl_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_AdjustStoreFrontDetail_AdjustStoreFront" />
+        <AssociationConnector Association="SSLsModel.FK_AdjustStoreFrontDetail_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_POGenerate_BudgetYear" />
+        <AssociationConnector Association="SSLsModel.FK_POHeader_BudgetYear" />
+        <AssociationConnector Association="SSLsModel.FK_PosGenerateCode_BudgetYear" />
+        <AssociationConnector Association="SSLsModel.FK_PriceSchedule_Campaign" />
+        <AssociationConnector Association="SSLsModel.FK_CheckStockDetails_CheckStockPos" />
+        <AssociationConnector Association="SSLsModel.FK_CheckStockDetails_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_CheckStockPos_Products" />
+        <AssociationConnector Association="SSLsModel.FK_CostChangeLog_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_Products_CostType" />
+        <AssociationConnector Association="SSLsModel.FK_GetGoodsStoreFrontDetails_GetGoodsStoreFront" />
+        <AssociationConnector Association="SSLsModel.FK_GetGoodsStoreFrontDetails_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_ISS2Front_ISS2FrontStatus" />
+        <AssociationConnector Association="SSLsModel.FK_ISS2FrontDetails_ISS2Front" />
+        <AssociationConnector Association="SSLsModel.FK_ISS2FrontDetails_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_ISS2FrontDetails_Shelf" />
+        <AssociationConnector Association="SSLsModel.FK_POHeader_PaymentType" />
+        <AssociationConnector Association="SSLsModel.FK_Vendor_POCostType" />
+        <AssociationConnector Association="SSLsModel.FK_PODetail_POHeader" />
+        <AssociationConnector Association="SSLsModel.FK_PODetail_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_POHeader_POStatus" />
+        <AssociationConnector Association="SSLsModel.FK_POHeader_Vendor" />
+        <AssociationConnector Association="SSLsModel.FK_PORcv_POHeader" />
+        <AssociationConnector Association="SSLsModel.FK_PORcvCash_POHeader" />
+        <AssociationConnector Association="SSLsModel.FK_PORcv_Transport" />
+        <AssociationConnector Association="SSLsModel.FK_PORcv_Vendor" />
+        <AssociationConnector Association="SSLsModel.FK_PORcvDetails_PORcv" />
+        <AssociationConnector Association="SSLsModel.FK_PORcvCashDetails_PORcvCash" />
+        <AssociationConnector Association="SSLsModel.FK_PORcvCashDetails_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_PORcvDetails_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_PosDetails_PosHeader" />
+        <AssociationConnector Association="SSLsModel.FK_PosDetails_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_PosGenerateCode_PosMachine" />
+        <AssociationConnector Association="SSLsModel.FK_PosHeader_PosMachine" />
+        <AssociationConnector Association="SSLsModel.FK_PosHeader_PosType" />
+        <AssociationConnector Association="SSLsModel.FK_PosPromotion_PosHeader" />
+        <AssociationConnector Association="SSLsModel.FK_PosUsedPromotion_PosHeader" />
+        <AssociationConnector Association="SSLsModel.FK_PrintSlipLog_PosHeader" />
+        <AssociationConnector Association="SSLsModel.FK_PosPromotion_PriceSchedule" />
+        <AssociationConnector Association="SSLsModel.FK_PosStock_Products" />
+        <AssociationConnector Association="SSLsModel.FK_PosStock_Shelf" />
+        <AssociationConnector Association="SSLsModel.FK_PosStockDetails_PosStock" />
+        <AssociationConnector Association="SSLsModel.FK_PosStockDetails_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_PosStockDetails_TransactionType" />
+        <AssociationConnector Association="SSLsModel.FK_PosUsedPromotion_PriceSchedule" />
+        <AssociationConnector Association="SSLsModel.FK_SellingPrice_PriceSchedule" />
+        <AssociationConnector Association="SSLsModel.FK_ProcessedGoods_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_Products_ProductCategory" />
+        <AssociationConnector Association="SSLsModel.FK_Products_ProductColor" />
+        <AssociationConnector Association="SSLsModel.FK_Products_ProductPosCollectPoints" />
+        <AssociationConnector Association="SSLsModel.FK_Products_ProductSize" />
+        <AssociationConnector Association="SSLsModel.FK_Products_ProductVatType" />
+        <AssociationConnector Association="SSLsModel.FK_SellingPrice_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_SellingPriceDetails_SellingPrice" />
+        <AssociationConnector Association="SSLsModel.FK_SellingPriceDetails_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_SellPriceChangeLog_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_StoreFrontStock_Products" />
+        <AssociationConnector Association="SSLsModel.FK_StoreFrontStockDetails_StoreFrontStock" />
+        <AssociationConnector Association="SSLsModel.FK_StoreFrontStockDetails_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_StoreFrontStockDetails_TransactionType" />
+        <AssociationConnector Association="SSLsModel.FK_StoreFrontTransferOutDtl_StoreFrontTransferOut" />
+        <AssociationConnector Association="SSLsModel.FK_StoreFrontTransferOutDtl_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_StoreFrontTransferWaste_Warehouse" />
+        <AssociationConnector Association="SSLsModel.FK_StoreFrontTransferWaste_WasteReason" />
+        <AssociationConnector Association="SSLsModel.FK_StoreFrontTransferWasteDtl_StoreFrontTransferWaste" />
+        <AssociationConnector Association="SSLsModel.FK_StoreFrontTransferWasteDtl_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_StoreFrontValueSet_StoreFrontValueDoc" />
+        <AssociationConnector Association="SSLsModel.FK_StoreFrontValueSet_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_CNWarehouse_Vendor" />
+        <AssociationConnector Association="SSLsModel.FK_Products_Vendor" />
+        <AssociationConnector Association="SSLsModel.FK_CNWarehouse_WasteReason" />
+        <AssociationConnector Association="SSLsModel.FK_WarehouseToWaste_WasteReason" />
+        <AssociationConnector Association="SSLsModel.FK_CNWarehouseDetails_CNWarehouse" />
+        <AssociationConnector Association="SSLsModel.FK_CNWarehouseDetails_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_CostRcvLog_Products" />
+        <AssociationConnector Association="SSLsModel.FK_CurrentStocks_ItemStatus" />
+        <AssociationConnector Association="SSLsModel.FK_CurrentStocks_Locations" />
+        <AssociationConnector Association="SSLsModel.FK_CurrentStocks_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_CurrentStocks_Warehouse" />
+        <AssociationConnector Association="SSLsModel.FK_PickingLocation_CurrentStocks" />
+        <AssociationConnector Association="SSLsModel.FK_WmsStockDetail_ItemRemark" />
+        <AssociationConnector Association="SSLsModel.FK_PickingDetails_ItemStatus" />
+        <AssociationConnector Association="SSLsModel.FK_Locations_LocationType" />
+        <AssociationConnector Association="SSLsModel.FK_Locations_Zone" />
+        <AssociationConnector Association="SSLsModel.FK_RcvDetails_Locations" />
+        <AssociationConnector Association="SSLsModel.FK_RcvLocation_Locations" />
+        <AssociationConnector Association="SSLsModel.FK_PickingDetails_Pickings" />
+        <AssociationConnector Association="SSLsModel.FK_PickingLocation_PickingDetails" />
+        <AssociationConnector Association="SSLsModel.FK_Pickings_PickingType" />
+        <AssociationConnector Association="SSLsModel.FK_Pickings_Warehouse" />
+        <AssociationConnector Association="SSLsModel.FK_Products_ProductBrands" />
+        <AssociationConnector Association="SSLsModel.FK_ProductDetails_Products" />
+        <AssociationConnector Association="SSLsModel.FK_ProductDetails_ProductUnit" />
+        <AssociationConnector Association="SSLsModel.FK_WarehouseToWasteDetails_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_WasteWarehouseDetails_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_WmsStockDetail_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_WmsTransferOutDetails_ProductDetails" />
+        <AssociationConnector Association="SSLsModel.FK_Products_ProductGroups" />
+        <AssociationConnector Association="SSLsModel.FK_Products_ProductUnit" />
+        <AssociationConnector Association="SSLsModel.FK_Products_ProductUnit1" />
+        <AssociationConnector Association="SSLsModel.FK_Products_ProductUnit2" />
+        <AssociationConnector Association="SSLsModel.FK_Products_Supplier" />
+        <AssociationConnector Association="SSLsModel.FK_Products_Zone" />
+        <AssociationConnector Association="SSLsModel.FK_WasteWarehouse_Products" />
+        <AssociationConnector Association="SSLsModel.FK_WmsStock_Products" />
+        <AssociationConnector Association="SSLsModel.FK_RcvDetails_RcvHeader" />
+        <AssociationConnector Association="SSLsModel.FK_RcvLocation_RcvDetails" />
+        <AssociationConnector Association="SSLsModel.FK_RcvHeader_RcvType" />
+        <AssociationConnector Association="SSLsModel.FK_RcvHeader_Warehouse" />
+        <AssociationConnector Association="SSLsModel.FK_WmsStockDetail_TransactionWms" />
+        <AssociationConnector Association="SSLsModel.FK_WasteWarehouse_Warehouse" />
+        <AssociationConnector Association="SSLsModel.FK_WmsStock_Warehouse" />
+        <AssociationConnector Association="SSLsModel.FK_WarehouseToWasteDetails_WarehouseToWaste" />
+        <AssociationConnector Association="SSLsModel.FK_WasteWarehouseDetails_WasteWarehouse" />
+        <AssociationConnector Association="SSLsModel.FK_WmsStock_Zone" />
+        <AssociationConnector Association="SSLsModel.FK_WmsStockDetail_WmsStock" />
+        <AssociationConnector Association="SSLsModel.FK_WmsTransferOutDetails_WmsTransferOut" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

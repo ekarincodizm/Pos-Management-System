@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="WH_TRATModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PS_PO_ORDER">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Name="ROWID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PO_ID" Type="int" Nullable="false" />
+          <Property Name="PO_NO" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="OBJ_ID" Type="int" Nullable="false" />
+          <Property Name="OBJ_NAME" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="CREATE_DATE" Type="smalldatetime" Nullable="false" />
+          <Property Name="USER_ID" Type="int" Nullable="false" />
+          <Property Name="ENABLE" Type="bit" Nullable="false" />
+          <Property Name="CONFIRM_DATE" Type="smalldatetime" />
+          <Property Name="CANCEL_DATE" Type="smalldatetime" />
+          <Property Name="CONFIRM_USER" Type="int" />
+          <Property Name="RCV_DOC" Type="varchar" MaxLength="30" />
+          <Property Name="RCV_DATE" Type="smalldatetime" />
+          <Property Name="VAT_TYPE" Type="int" Nullable="false" />
+          <Property Name="CONFIRMRCV" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="WH_BRAND_MAST">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Name="ROWID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BRAND_NO" Type="int" Nullable="false" />
+          <Property Name="BRAND_NAME" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="CREATE_DATE" Type="smalldatetime" Nullable="false" />
+          <Property Name="UPDATE_DATE" Type="smalldatetime" />
+          <Property Name="USER_ID" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WH_CUSTOMER_MAST">
+          <Key>
+            <PropertyRef Name="CUSTOMER_NO" />
+          </Key>
+          <Property Name="ROWID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CUSTOMER_NO" Type="int" Nullable="false" />
+          <Property Name="CUSTOMER_NAME" Type="varchar" MaxLength="100" />
+          <Property Name="CUSTOMER_BRANCH" Type="varchar" MaxLength="60" />
+          <Property Name="CUSTOMER_TAXID" Type="varchar" MaxLength="13" />
+          <Property Name="CUSTOMER_ADDRESS" Type="varchar(max)" />
+          <Property Name="CUSTOMER_PROVINCE" Type="varchar" MaxLength="60" />
+          <Property Name="CUSTOMER_POSTNO" Type="varchar" MaxLength="5" />
+          <Property Name="CUSTOMER_PHONE" Type="varchar" MaxLength="100" />
+          <Property Name="CUSTOMER_FAX" Type="varchar" MaxLength="100" />
+          <Property Name="CUSTOMER_EMAIL" Type="varchar" MaxLength="100" />
+          <Property Name="CREATE_DATE" Type="smalldatetime" />
+          <Property Name="UPDATE_DATE" Type="smalldatetime" />
+          <Property Name="USER_ID" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'WH_TRAT.dbo.WH_LOCATION_MAST' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="WH_LOCATION_MAST">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Name="ROWID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DOOR_NO" Type="varchar" MaxLength="2" />
+          <Property Name="LOCATION_TYPE" Type="varchar" MaxLength="1" />
+          <Property Name="LOCATION_NO" Type="varchar" MaxLength="8" />
+          <Property Name="BOOK_FLAG" Type="varchar" MaxLength="1" />
+          <Property Name="CREATE_DATE" Type="smalldatetime" />
+          <Property Name="UPDATE_DATE" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="WH_LOCSTK">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Name="ROWID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WH_NO" Type="varchar" MaxLength="10" />
+          <Property Name="LOCATION_TYPE" Type="varchar" MaxLength="1" />
+          <Property Name="LOCATION_NO" Type="varchar" MaxLength="8" />
+          <Property Name="ITEM_STATUS" Type="varchar" MaxLength="2" />
+          <Property Name="DOOR_NO" Type="varchar" MaxLength="2" />
+          <Property Name="PRODUCT_NO" Type="varchar" MaxLength="30" />
+          <Property Name="WH_BARCODE" Type="varchar" MaxLength="20" />
+          <Property Name="QTY" Type="real" />
+          <Property Name="BOOK_QTY" Type="real" />
+          <Property Name="UNIT" Type="varchar" MaxLength="30" />
+          <Property Name="CREATE_DATE" Type="smalldatetime" />
+          <Property Name="UPDATE_DATE" Type="smalldatetime" />
+          <Property Name="PRODUCT_ID" Type="int" />
+          <Property Name="PACK_SIZE" Type="real" />
+          <Property Name="QTY_PIECE" Type="real" />
+        </EntityType>
+        <EntityType Name="WH_PRODUCT_MAST_DTL">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Name="ROWID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HD_ROWID" Type="int" Nullable="false" />
+          <Property Name="PRODUCT_NO" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="UNIT_NAME" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="PACK_SIZE" Type="real" Nullable="false" />
+          <Property Name="COST" Type="money" Nullable="false" />
+          <Property Name="SELL_TYPE" Type="int" />
+          <Property Name="CREATE_DATE" Type="smalldatetime" />
+          <Property Name="UPDATE_DATE" Type="smalldatetime" />
+          <Property Name="USER_ID" Type="varchar" MaxLength="30" />
+          <Property Name="SKU_KEY" Type="varchar" MaxLength="30" />
+          <Property Name="LAST_ACTION" Type="smalldatetime" />
+          <Property Name="SELL_PRICE" Type="money" />
+          <Property Name="OLD_COST" Type="money" />
+          <Property Name="OLD_PRICE" Type="money" />
+          <Property Name="ENABLE" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WH_PRODUCT_MAST_HD">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Name="ROWID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PRODUCT_NAME" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="BRAND_NO" Type="int" Nullable="false" />
+          <Property Name="GROUP_NO" Type="int" Nullable="false" />
+          <Property Name="COST_PIECE" Type="money" Nullable="false" />
+          <Property Name="DOOR_NO" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="CREATE_DATE" Type="smalldatetime" Nullable="false" />
+          <Property Name="UPDATE_DATE" Type="smalldatetime" />
+          <Property Name="USER_ID" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="SKU_KEY" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="ENABLE" Type="bit" Nullable="false" />
+          <Property Name="VAT_TYPE" Type="bit" Nullable="false" />
+          <Property Name="BONUS_TYPE" Type="bit" Nullable="false" />
+          <Property Name="CAL_QTY" Type="real" />
+          <Property Name="CAL_COST" Type="money" />
+        </EntityType>
+        <EntityContainer Name="WH_TRATModelStoreContainer">
+          <EntitySet Name="PS_PO_ORDER" EntityType="Self.PS_PO_ORDER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WH_BRAND_MAST" EntityType="Self.WH_BRAND_MAST" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WH_CUSTOMER_MAST" EntityType="Self.WH_CUSTOMER_MAST" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WH_LOCSTK" EntityType="Self.WH_LOCSTK" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WH_PRODUCT_MAST_DTL" EntityType="Self.WH_PRODUCT_MAST_DTL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WH_PRODUCT_MAST_HD" EntityType="Self.WH_PRODUCT_MAST_HD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WH_LOCATION_MAST" EntityType="Self.WH_LOCATION_MAST" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [WH_LOCATION_MAST].[ROWID] AS [ROWID], 
+    [WH_LOCATION_MAST].[DOOR_NO] AS [DOOR_NO], 
+    [WH_LOCATION_MAST].[LOCATION_TYPE] AS [LOCATION_TYPE], 
+    [WH_LOCATION_MAST].[LOCATION_NO] AS [LOCATION_NO], 
+    [WH_LOCATION_MAST].[BOOK_FLAG] AS [BOOK_FLAG], 
+    [WH_LOCATION_MAST].[CREATE_DATE] AS [CREATE_DATE], 
+    [WH_LOCATION_MAST].[UPDATE_DATE] AS [UPDATE_DATE]
+    FROM [dbo].[WH_LOCATION_MAST] AS [WH_LOCATION_MAST]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WH_TRATModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="WH_LOCSTK">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Name="ROWID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WH_NO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="LOCATION_TYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="LOCATION_NO" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="ITEM_STATUS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="DOOR_NO" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="PRODUCT_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="WH_BARCODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="QTY" Type="Single" />
+          <Property Name="BOOK_QTY" Type="Single" />
+          <Property Name="UNIT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CREATE_DATE" Type="DateTime" Precision="0" />
+          <Property Name="UPDATE_DATE" Type="DateTime" Precision="0" />
+          <Property Name="PRODUCT_ID" Type="Int32" />
+          <Property Name="PACK_SIZE" Type="Single" />
+          <Property Name="QTY_PIECE" Type="Single" />
+        </EntityType>
+        <EntityType Name="WH_PRODUCT_MAST_DTL">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Name="ROWID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HD_ROWID" Type="Int32" Nullable="false" />
+          <Property Name="PRODUCT_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UNIT_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PACK_SIZE" Type="Single" Nullable="false" />
+          <Property Name="COST" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SELL_TYPE" Type="Int32" />
+          <Property Name="CREATE_DATE" Type="DateTime" Precision="0" />
+          <Property Name="UPDATE_DATE" Type="DateTime" Precision="0" />
+          <Property Name="USER_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SKU_KEY" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="LAST_ACTION" Type="DateTime" Precision="0" />
+          <Property Name="SELL_PRICE" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="OLD_COST" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="OLD_PRICE" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ENABLE" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WH_PRODUCT_MAST_HD">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Name="ROWID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PRODUCT_NAME" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BRAND_NO" Type="Int32" Nullable="false" />
+          <Property Name="GROUP_NO" Type="Int32" Nullable="false" />
+          <Property Name="COST_PIECE" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="DOOR_NO" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CREATE_DATE" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="UPDATE_DATE" Type="DateTime" Precision="0" />
+          <Property Name="USER_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SKU_KEY" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ENABLE" Type="Boolean" Nullable="false" />
+          <Property Name="VAT_TYPE" Type="Boolean" Nullable="false" />
+          <Property Name="BONUS_TYPE" Type="Boolean" Nullable="false" />
+          <Property Name="CAL_QTY" Type="Single" />
+          <Property Name="CAL_COST" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityContainer Name="WH_TRATEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="WH_LOCSTK" EntityType="Self.WH_LOCSTK" />
+          <EntitySet Name="WH_PRODUCT_MAST_DTL" EntityType="Self.WH_PRODUCT_MAST_DTL" />
+          <EntitySet Name="WH_PRODUCT_MAST_HD" EntityType="Self.WH_PRODUCT_MAST_HD" />
+          <EntitySet Name="PS_PO_ORDER" EntityType="WH_TRATModel.PS_PO_ORDER" />
+          <EntitySet Name="WH_LOCATION_MAST" EntityType="WH_TRATModel.WH_LOCATION_MAST" />
+          <EntitySet Name="WH_CUSTOMER_MAST" EntityType="WH_TRATModel.WH_CUSTOMER_MAST" />
+          <EntitySet Name="WH_BRAND_MAST" EntityType="WH_TRATModel.WH_BRAND_MAST" />
+        </EntityContainer>
+        <EntityType Name="PS_PO_ORDER">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Name="ROWID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PO_ID" Type="Int32" Nullable="false" />
+          <Property Name="PO_NO" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OBJ_ID" Type="Int32" Nullable="false" />
+          <Property Name="OBJ_NAME" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_DATE" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="USER_ID" Type="Int32" Nullable="false" />
+          <Property Name="ENABLE" Type="Boolean" Nullable="false" />
+          <Property Name="CONFIRM_DATE" Type="DateTime" Precision="0" />
+          <Property Name="CANCEL_DATE" Type="DateTime" Precision="0" />
+          <Property Name="CONFIRM_USER" Type="Int32" />
+          <Property Name="RCV_DOC" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="RCV_DATE" Type="DateTime" Precision="0" />
+          <Property Name="VAT_TYPE" Type="Int32" Nullable="false" />
+          <Property Name="CONFIRMRCV" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="WH_LOCATION_MAST">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Name="ROWID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DOOR_NO" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="LOCATION_TYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="LOCATION_NO" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="BOOK_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CREATE_DATE" Type="DateTime" Precision="0" />
+          <Property Name="UPDATE_DATE" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="WH_CUSTOMER_MAST">
+          <Key>
+            <PropertyRef Name="CUSTOMER_NO" />
+          </Key>
+          <Property Name="ROWID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CUSTOMER_NO" Type="Int32" Nullable="false" />
+          <Property Name="CUSTOMER_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CUSTOMER_BRANCH" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="CUSTOMER_TAXID" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="CUSTOMER_ADDRESS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CUSTOMER_PROVINCE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="CUSTOMER_POSTNO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="CUSTOMER_PHONE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CUSTOMER_FAX" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CUSTOMER_EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CREATE_DATE" Type="DateTime" Precision="0" />
+          <Property Name="UPDATE_DATE" Type="DateTime" Precision="0" />
+          <Property Name="USER_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="WH_BRAND_MAST">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Name="ROWID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BRAND_NO" Type="Int32" Nullable="false" />
+          <Property Name="BRAND_NAME" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="CREATE_DATE" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="UPDATE_DATE" Type="DateTime" Precision="0" />
+          <Property Name="USER_ID" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WH_TRATModelStoreContainer" CdmEntityContainer="WH_TRATEntities">
+          <EntitySetMapping Name="WH_LOCSTK">
+            <EntityTypeMapping TypeName="WH_TRATModel.WH_LOCSTK">
+              <MappingFragment StoreEntitySet="WH_LOCSTK">
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+                <ScalarProperty Name="WH_NO" ColumnName="WH_NO" />
+                <ScalarProperty Name="LOCATION_TYPE" ColumnName="LOCATION_TYPE" />
+                <ScalarProperty Name="LOCATION_NO" ColumnName="LOCATION_NO" />
+                <ScalarProperty Name="ITEM_STATUS" ColumnName="ITEM_STATUS" />
+                <ScalarProperty Name="DOOR_NO" ColumnName="DOOR_NO" />
+                <ScalarProperty Name="PRODUCT_NO" ColumnName="PRODUCT_NO" />
+                <ScalarProperty Name="WH_BARCODE" ColumnName="WH_BARCODE" />
+                <ScalarProperty Name="QTY" ColumnName="QTY" />
+                <ScalarProperty Name="BOOK_QTY" ColumnName="BOOK_QTY" />
+                <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+                <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+                <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+                <ScalarProperty Name="PRODUCT_ID" ColumnName="PRODUCT_ID" />
+                <ScalarProperty Name="PACK_SIZE" ColumnName="PACK_SIZE" />
+                <ScalarProperty Name="QTY_PIECE" ColumnName="QTY_PIECE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WH_PRODUCT_MAST_DTL">
+            <EntityTypeMapping TypeName="WH_TRATModel.WH_PRODUCT_MAST_DTL">
+              <MappingFragment StoreEntitySet="WH_PRODUCT_MAST_DTL">
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+                <ScalarProperty Name="HD_ROWID" ColumnName="HD_ROWID" />
+                <ScalarProperty Name="PRODUCT_NO" ColumnName="PRODUCT_NO" />
+                <ScalarProperty Name="UNIT_NAME" ColumnName="UNIT_NAME" />
+                <ScalarProperty Name="PACK_SIZE" ColumnName="PACK_SIZE" />
+                <ScalarProperty Name="COST" ColumnName="COST" />
+                <ScalarProperty Name="SELL_TYPE" ColumnName="SELL_TYPE" />
+                <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+                <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="SKU_KEY" ColumnName="SKU_KEY" />
+                <ScalarProperty Name="LAST_ACTION" ColumnName="LAST_ACTION" />
+                <ScalarProperty Name="SELL_PRICE" ColumnName="SELL_PRICE" />
+                <ScalarProperty Name="OLD_COST" ColumnName="OLD_COST" />
+                <ScalarProperty Name="OLD_PRICE" ColumnName="OLD_PRICE" />
+                <ScalarProperty Name="ENABLE" ColumnName="ENABLE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WH_PRODUCT_MAST_HD">
+            <EntityTypeMapping TypeName="WH_TRATModel.WH_PRODUCT_MAST_HD">
+              <MappingFragment StoreEntitySet="WH_PRODUCT_MAST_HD">
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+                <ScalarProperty Name="PRODUCT_NAME" ColumnName="PRODUCT_NAME" />
+                <ScalarProperty Name="BRAND_NO" ColumnName="BRAND_NO" />
+                <ScalarProperty Name="GROUP_NO" ColumnName="GROUP_NO" />
+                <ScalarProperty Name="COST_PIECE" ColumnName="COST_PIECE" />
+                <ScalarProperty Name="DOOR_NO" ColumnName="DOOR_NO" />
+                <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+                <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="SKU_KEY" ColumnName="SKU_KEY" />
+                <ScalarProperty Name="ENABLE" ColumnName="ENABLE" />
+                <ScalarProperty Name="VAT_TYPE" ColumnName="VAT_TYPE" />
+                <ScalarProperty Name="BONUS_TYPE" ColumnName="BONUS_TYPE" />
+                <ScalarProperty Name="CAL_QTY" ColumnName="CAL_QTY" />
+                <ScalarProperty Name="CAL_COST" ColumnName="CAL_COST" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PS_PO_ORDER">
+            <EntityTypeMapping TypeName="WH_TRATModel.PS_PO_ORDER">
+              <MappingFragment StoreEntitySet="PS_PO_ORDER">
+                <ScalarProperty Name="CONFIRMRCV" ColumnName="CONFIRMRCV" />
+                <ScalarProperty Name="VAT_TYPE" ColumnName="VAT_TYPE" />
+                <ScalarProperty Name="RCV_DATE" ColumnName="RCV_DATE" />
+                <ScalarProperty Name="RCV_DOC" ColumnName="RCV_DOC" />
+                <ScalarProperty Name="CONFIRM_USER" ColumnName="CONFIRM_USER" />
+                <ScalarProperty Name="CANCEL_DATE" ColumnName="CANCEL_DATE" />
+                <ScalarProperty Name="CONFIRM_DATE" ColumnName="CONFIRM_DATE" />
+                <ScalarProperty Name="ENABLE" ColumnName="ENABLE" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+                <ScalarProperty Name="OBJ_NAME" ColumnName="OBJ_NAME" />
+                <ScalarProperty Name="OBJ_ID" ColumnName="OBJ_ID" />
+                <ScalarProperty Name="PO_NO" ColumnName="PO_NO" />
+                <ScalarProperty Name="PO_ID" ColumnName="PO_ID" />
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WH_LOCATION_MAST">
+            <EntityTypeMapping TypeName="WH_TRATModel.WH_LOCATION_MAST">
+              <MappingFragment StoreEntitySet="WH_LOCATION_MAST">
+                <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+                <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+                <ScalarProperty Name="BOOK_FLAG" ColumnName="BOOK_FLAG" />
+                <ScalarProperty Name="LOCATION_NO" ColumnName="LOCATION_NO" />
+                <ScalarProperty Name="LOCATION_TYPE" ColumnName="LOCATION_TYPE" />
+                <ScalarProperty Name="DOOR_NO" ColumnName="DOOR_NO" />
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WH_CUSTOMER_MAST">
+            <EntityTypeMapping TypeName="WH_TRATModel.WH_CUSTOMER_MAST">
+              <MappingFragment StoreEntitySet="WH_CUSTOMER_MAST">
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+                <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+                <ScalarProperty Name="CUSTOMER_EMAIL" ColumnName="CUSTOMER_EMAIL" />
+                <ScalarProperty Name="CUSTOMER_FAX" ColumnName="CUSTOMER_FAX" />
+                <ScalarProperty Name="CUSTOMER_PHONE" ColumnName="CUSTOMER_PHONE" />
+                <ScalarProperty Name="CUSTOMER_POSTNO" ColumnName="CUSTOMER_POSTNO" />
+                <ScalarProperty Name="CUSTOMER_PROVINCE" ColumnName="CUSTOMER_PROVINCE" />
+                <ScalarProperty Name="CUSTOMER_ADDRESS" ColumnName="CUSTOMER_ADDRESS" />
+                <ScalarProperty Name="CUSTOMER_TAXID" ColumnName="CUSTOMER_TAXID" />
+                <ScalarProperty Name="CUSTOMER_BRANCH" ColumnName="CUSTOMER_BRANCH" />
+                <ScalarProperty Name="CUSTOMER_NAME" ColumnName="CUSTOMER_NAME" />
+                <ScalarProperty Name="CUSTOMER_NO" ColumnName="CUSTOMER_NO" />
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WH_BRAND_MAST">
+            <EntityTypeMapping TypeName="WH_TRATModel.WH_BRAND_MAST">
+              <MappingFragment StoreEntitySet="WH_BRAND_MAST">
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+                <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+                <ScalarProperty Name="BRAND_NAME" ColumnName="BRAND_NAME" />
+                <ScalarProperty Name="BRAND_NO" ColumnName="BRAND_NO" />
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="44eae09ece2b456ebcabc9fd0a21eb61" Name="Diagram1">
+        <EntityTypeShape EntityType="WH_TRATModel.WH_PRODUCT_MAST_DTL_DELETE" Width="2.875" PointX="9.125" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="WH_TRATModel.WH_PRODUCT_MAST_HD" Width="2.125" PointX="0.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WH_TRATModel.WH_PRODUCT_MAST_HD_DELETE" Width="2.625" PointX="6.375" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="WH_TRATModel.WH_PRODUCT_MAST_DTL" Width="2.25" PointX="3.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
