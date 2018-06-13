@@ -20,15 +20,7 @@ namespace Pos_Management_System
 
         private void BrandForm_Load(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear();
-            dataGridView1.Refresh();
-            var data = Singleton.SingletonProductBrand.Instance().ProductBrands;
-            foreach (var item in data)
-            {
-                dataGridView1.Rows.Add(item.Id, item.Code, item.Name, Library.GetFullNameUserById(item.CreateBy),
-                    Library.ConvertBoolToStr(item.Enable), item.Description);
-
-            }
+            dataGrid();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -54,15 +46,15 @@ namespace Pos_Management_System
             string name = dataGridView1.Rows[row].Cells[colName].Value.ToString();
             var desc = dataGridView1.Rows[row].Cells[colDesc].Value ?? "-";
 
-            bool enable = Singleton.SingletonProductBrand.Instance().ProductBrands.SingleOrDefault(w => w.Id == id).Enable;
-            if (enable)
-            {
+            //bool enable = Singleton.SingletonProductBrand.Instance().ProductBrands.SingleOrDefault(w => w.Id == id).Enable;
+            //if (enable)
+            //{
                 radioButton1.Checked = true;
-            }
-            else
-            {
-                radioButton2.Checked = true;
-            }
+            //}
+            //else
+            //{
+            //    radioButton2.Checked = true;
+            //}
             textBoxCode.Text = code;
             textBoxName.Text = name;
             textBoxDesc.Text = desc.ToString();
@@ -136,15 +128,30 @@ namespace Pos_Management_System
                 }
                 db.SaveChanges();
                 Singleton.SingletonPriority1.SetInstance();
-                Singleton.SingletonPriority1.Instance();
-                this.Dispose();
-                _Id = 0;
+                //Singleton.SingletonPriority1.Instance();
+
+                dataGrid();
+                //this.Dispose();
+                //_Id = 0;
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        public void dataGrid()
+        {
+            dataGridView1.Rows.Clear();
+            dataGridView1.Refresh();
+            var data = Singleton.SingletonProductBrand.Instance().ProductBrands;
+            foreach (var item in data)
+            {
+                dataGridView1.Rows.Add(item.Id, item.Code, item.Name, Library.GetFullNameUserById(item.CreateBy),
+                    Library.ConvertBoolToStr(item.Enable), item.Description);
+
+            }
         }
     }
 }

@@ -14,15 +14,15 @@ namespace Pos_Management_System.Singleton
         {
             // Uses lazy initialization.
             // Note: this is not thread safe.
-            if (_instance == null)
-            {
+            //if (_instance == null)
+            //{
                 using (SSLsEntities db = new SSLsEntities())
                 {
                     _instance = new SingletonProductBrand();
                     var data = db.ProductBrands.Where(w => w.Enable == true).OrderBy(w => w.Id).ToList();
                     _instance.ProductBrands = data;
                 }
-            }
+            //}
             return _instance;
         }
         public static SingletonProductBrand SetInstance()
