@@ -423,7 +423,7 @@ namespace Pos_Management_System
 
             SupplierForm obj = new SupplierForm();
             obj.MdiParent = this;
-            maxminForm(obj, "min");
+            maxminForm(obj, "max");
             obj.Show();
         }
 
